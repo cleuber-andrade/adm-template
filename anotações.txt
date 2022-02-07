@@ -1,0 +1,101 @@
+CONTEXT API - é quando precisamos criar um components(global) onde poderam ser utilizados em qualquer outro componente.(seja eles pai filho ou qualquer outro tipo).
+
+O recomendado é a utilização useContaxt.
+
+Parte 1 utilizando Consumer
+ 
+import { createContext } from "react";
+
+
+const AppContext = createContext({
+  nome: null
+})
+
+export function AppProvider(props) {
+  return (
+    <AppContext.Provider value={{
+      nome:"Teste Context API"
+    }}>
+      {props.children}
+    </AppContext.Provider>
+  )
+}
+
+Parte 2 utilizando Consumer
+
+export default AppContext;
+export const AppConsumer = AppContext.Consumer;
+
+import Layout from "../components/templates/Layout";
+import { AppConsumer } from "../data/context/AppContext";
+import useAppData from '../data/hook/useAppData';
+
+
+export default function Notificacoes() {
+  const dados = useAppData();
+
+  return (
+    <Layout titulo="Notificações" 
+    subtitulo="Aqui você irá gerênciar as suas notificações">
+      <AppConsumer>
+        {dados => <h3>{dados.nome}</h3>}
+      </AppConsumer>      
+    </Layout>
+  )
+}
+
+
+
+
+ 
+Parte 1 utilizando useContext
+
+
+import { createContext } from "react";
+
+
+const AppContext = createContext({
+  nome: null
+})
+
+export function AppProvider(props) {
+  return (
+    <AppContext.Provider value={{
+      nome:"Teste Context API"
+    }}>
+      {props.children}
+    </AppContext.Provider>
+  )
+}
+
+export default AppContext;
+
+
+
+Parte 2 utilizando useContext
+
+import { useContext } from "react";
+import AppContext from "../context/AppContext";
+
+
+const useAppData = () => useContext(AppContext);
+
+export default useAppData;
+
+
+Parte 3 utilizando useContext
+
+import Layout from "../components/templates/Layout";
+import useAppData from '../data/hook/useAppData';
+
+
+export default function Notificacoes() {
+  const dados = useAppData();
+
+  return (
+    <Layout titulo="Notificações" 
+    subtitulo="Aqui você irá gerênciar as suas notificações">      
+      <h3>{dados.nome}</h3>
+    </Layout>
+  )
+}
