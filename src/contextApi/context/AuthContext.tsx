@@ -61,7 +61,7 @@ export function AuthProvider(props) {
             setCarregando(true)
             const resp = await firebase.auth()
                 .signInWithEmailAndPassword(email, senha)
-    
+
             await configurarSessao(resp.user)
             route.push('/')
         } finally {
@@ -74,7 +74,7 @@ export function AuthProvider(props) {
             setCarregando(true)
             const resp = await firebase.auth()
                 .createUserWithEmailAndPassword(email, senha)
-    
+
             await configurarSessao(resp.user)
             route.push('/')
         } finally {
@@ -83,12 +83,12 @@ export function AuthProvider(props) {
     }
 
     async function loginGoogle() {
-        try {
+        try{
             setCarregando(true)
             const resp = await firebase.auth().signInWithPopup(
-                new firebase.auth.GoogleAuthProvider()
+              new firebase.auth.GoogleAuthProvider()
             )
-    
+
             await configurarSessao(resp.user)
             route.push('/')
         } finally {
