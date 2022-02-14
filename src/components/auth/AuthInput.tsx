@@ -7,15 +7,15 @@ interface AuthInputProps {
   valorMudou: (novoValor: any) => void
 }
 
-export default function AuthInput(props: AuthInputProps) {
-  return props.naoRenderizarQuando ? null : (
+export default function AuthInput({naoRenderizarQuando, label, tipo, valor, valorMudou, obrigatorio}: AuthInputProps) {
+  return naoRenderizarQuando ? null : (
       <div className="flex flex-col mt-4">
-          <label>{props.label}</label>
+          <label>{label}</label>
           <input
-              type={props.tipo ?? 'text'}
-              value={props.valor}
-              onChange={e => props.valorMudou?.(e.target.value)}
-              required={props.obrigatorio}
+              type={tipo ?? 'text'}
+              value={valor}
+              onChange={e => valorMudou?.(e.target.value)}
+              required={obrigatorio}
               className={`
                   px-4 py-3 rounded-lg bg-gray-200 mt-2
                   border focus:border-blue-500 focus:bg-white
