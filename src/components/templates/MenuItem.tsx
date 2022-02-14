@@ -9,29 +9,29 @@ interface MenuItemProps {
     onClick?: (evento: any) => void
 }
 
-export default function MenuItem(props: MenuItemProps) {
+export default function MenuItem({texto, icone, url, className, onClick}: MenuItemProps) {
     function renderizarLink() {
         return (
             <a className={`
                     flex flex-col justify-center items-center
                     h-20 w-20
                     dark:text-gray-200
-                    ${props.className}
+                    ${className}
                 `}>
-                {props.icone}
+                {icone}
                 <span className={`text-xs font-light`}>
-                    {props.texto}
+                    {texto}
                 </span>
             </a>
         )
     }
     return (
-        <li onClick={props.onClick} className={`
+        <li onClick={onClick} className={`
             hover:bg-gray-100 dark:hover:bg-gray-800
             cursor-pointer
         `}>
-            {props.url ? (
-                <Link href={props.url}>
+            {url ? (
+                <Link href={url}>
                     {renderizarLink()}
                 </Link>
             ) : (

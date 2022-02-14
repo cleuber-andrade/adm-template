@@ -9,12 +9,12 @@ interface CabecalhoProps {
     subtitulo: string
 }
 
-export default function Cabecalho(props: CabecalhoProps) {
+export default function Cabecalho({titulo, subtitulo}: CabecalhoProps) {
     const { tema, alternarTema } = useAppData()
 
     return (
         <div className={`flex`}>
-            <Titulo titulo={props.titulo} subtitulo={props.subtitulo} />
+            <Titulo titulo={titulo} subtitulo={subtitulo} />
             <div className={`flex flex-grow justify-end items-center`}>
                 <BotaoAlternarTema tema={tema} alternarTema={alternarTema} />
                 <AvatarUsuario className="ml-3" />

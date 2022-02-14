@@ -11,19 +11,19 @@ interface LayoutProps {
     children?: any
 }
 
-export default function Layout(props: LayoutProps) {
+export default function Layout({ titulo ,subtitulo ,children  }: LayoutProps) {
     const { tema } = useAppData()
     return (
         <ForcarAutenticacao>
             <div className={`${tema} flex h-screen w-screen`}>
                 <MenuLateral />
                 <div className={`
-                flex flex-col w-full p-7 
+                flex flex-col w-full p-7
                 bg-gray-300 dark:bg-gray-800
             `}>
-                    <Cabecalho titulo={props.titulo} subtitulo={props.subtitulo} />
+                    <Cabecalho titulo={titulo} subtitulo={subtitulo} />
                     <Conteudo>
-                        {props.children}
+                        {children}
                     </Conteudo>
                 </div>
             </div>

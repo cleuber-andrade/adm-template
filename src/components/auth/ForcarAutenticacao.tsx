@@ -4,7 +4,7 @@ import router from 'next/router'
 import loading from '../../../public/images/loading.gif'
 import useAuth from '../../contextApi/hook/useAuth'
 
-export default function ForcarAutenticacao(props) {
+export default function ForcarAutenticacao({children}) {
 
     const { usuario, carregando } = useAuth()
 
@@ -22,7 +22,7 @@ export default function ForcarAutenticacao(props) {
                         }}
                     />
                 </Head>
-                {props.children}
+                {children}
             </>
         )
     }
