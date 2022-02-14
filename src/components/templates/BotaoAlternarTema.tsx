@@ -3,6 +3,7 @@ import { IconeLua, IconeSol } from "../icons";
 
 interface BotaoAlternarTemaProps {
     tema: string
+
     alternarTema: () => void
 }
 
@@ -11,7 +12,7 @@ export default function BotaoAlternarTema({tema , alternarTema}: BotaoAlternarTe
         <div onClick={alternarTema} className={`
             hidden sm:flex items-center cursor-pointer
             bg-gradient-to-r from-yellow-300 to-yellow-600
-            w-14 lg:w-24 h-8 p-1 rounded-full
+            w-14 mr-3 lg:w-24 h-8 p-1 rounded-full
         `}>
             <div className={`
                 flex items-center justify-center
@@ -31,7 +32,7 @@ export default function BotaoAlternarTema({tema , alternarTema}: BotaoAlternarTe
         <div onClick={alternarTema} className={`
             hidden sm:flex items-center justify-end cursor-pointer
             bg-gradient-to-r from-gray-500 to-gray-900
-            w-14 lg:w-24 h-8 p-1 rounded-full
+            w-14 mr-3 lg:w-24 h-8 p-1 rounded-full
         `}>
             <div className={`
                 hidden lg:flex items-center mr-2
