@@ -1,7 +1,7 @@
 export default class Cliente {
   #id: string
   #nome: string
-  #cpf: number
+  #cpf: string
   #carteira: string
   #endereco: string
   #nascimento: number
@@ -10,7 +10,7 @@ export default class Cliente {
   #especialidade: string
   #doutor: string
 
-  constructor(id: string = null ,nome: string, cpf: number , carteira: string, endereco: string, nascimento: number, tel: string,  plano: string, especialidade: string, doutor: string ){
+  constructor(id: string = null,nome: string, cpf: string , carteira: string, endereco: string, nascimento: number, tel: string,  plano: string, especialidade: string, doutor: string ){
     this.#id = id
     this.#nome = nome
     this.#cpf = cpf
@@ -24,7 +24,7 @@ export default class Cliente {
   }
 
   static vazio(){
-    return new Cliente("", "", 0, "", "", 0, "", "", "","")
+    return new Cliente("", "", "", "", "", 0, "", "", "","")
   }
 
   get nome(){

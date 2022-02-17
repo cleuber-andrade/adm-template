@@ -1,6 +1,6 @@
 //2º
 import useAuth from "../../contextApi/hook/useAuth"
-import { IconeAgenda, IconeAjustes, IconeCadastro, IconeCasa, IconeLogout, IconeNotificacoes } from "../icons"
+import { IconeAgenda, IconeAjustes, IconeCadastro, IconeCasa, IconeLogout, IconeNotificacoes, IconeSource } from "../icons"
 import Logo from "./Logo"
 import MenuItem from "./MenuItem"
 
@@ -27,6 +27,7 @@ export default function MenuLateral() {
                 <MenuItem url="/agendamento" texto="Agendamento" icone={IconeAgenda} />
                 <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes} />
                 <MenuItem url="/notificacoes" texto="Notificações" icone={IconeNotificacoes}  />
+                <MenuItem url="/search" texto="Pesquisa" icone={IconeSource} />
             </ul>
             <ul>
                 <MenuItem
