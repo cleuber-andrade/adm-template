@@ -16,7 +16,7 @@ export default function MenuLateral() {
         `}>
             <div className={`
                 flex flex-col items-center justify-center
-                bg-gradient-to-r from-indigo-500 to-purple-800
+                bg-gradient-to-r from-yellow-500  to-yellow-200
                 h-20 w-20
             `}>
                 <Logo />

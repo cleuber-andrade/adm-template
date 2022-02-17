@@ -6,7 +6,7 @@ interface  CadastroProps  {
 const Cadastro = ({}: CadastroProps) => {
   return(
     <div>
-      <Layout titulo="Cadastro de Clientes" subtitulo="Aqui é o cadastramento">
+      <Layout titulo="Cadastro" subtitulo="Aqui é o cadastramento">
         <h2>Cadastro</h2>
       </Layout>
     </div>
