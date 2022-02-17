@@ -2,6 +2,7 @@ import { useState } from "react"
 import AuthInput from "../components/auth/AuthInput"
 import { IconeAtencao } from "../components/icons"
 import useAuth from "../contextApi/hook/useAuth"
+import Head from 'next/head'
 
 export default function Autenticacao() {
 
@@ -30,9 +31,15 @@ export default function Autenticacao() {
     }
 
     return (
+      <>
+        <Head>
+          <title>Home</title>
+          <meta name="Pagina Home" content="Informações gerais sobre estatisticas do app" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <div className="flex h-screen items-center justify-center">
             <div className="hidden md:block md:w-1/2 lg:w-2/3">
-                <img 
+                <img
                     src="https://source.unsplash.com/random"
                     alt="Imagem da Tela de Autenticação"
                     className="h-screen w-full object-cover" />
@@ -52,7 +59,7 @@ export default function Autenticacao() {
                         <span className="ml-3">{erro}</span>
                     </div>
                 ) : false}
-                
+
                 <AuthInput
                     label="Email"
                     tipo="email"
@@ -103,5 +110,7 @@ export default function Autenticacao() {
                 )}
             </div>
         </div>
+      </>
+
     )
 }
