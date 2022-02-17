@@ -25,9 +25,9 @@ const Search = ({}: PesquisaProps) => {
           mt-20
           bg-white
           p-6 rounded-md
-          bg-opacity-20
-          backdrop-filter
-          backdrop-blur-lg"
+          dark:bg-opacity-20
+          dark:backdrop-filter
+          dark:backdrop-blur-lg"
         >
           <Tabela clientes={clientes}/>
         </div>
