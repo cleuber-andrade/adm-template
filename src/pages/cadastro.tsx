@@ -8,7 +8,7 @@ const Cadastro = ({}: CadastroProps) => {
   return(
     <div>
       <Head>
-          <title>Cadastro</title>
+          <title>Cadastro - Drª Ana Katarina</title>
           <meta name="Pagina Cadastro" content="Cadastramento de Clientes" />
           <link rel="icon" href="/favicon.ico" />
       </Head>

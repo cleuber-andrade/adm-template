@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-          <title>Home</title>
+          <title>Home - Drª Ana Katarina</title>
           <meta name="Pagina Home" content="Informações gerais sobre estatisticas do app" />
           <link rel="icon" href="/favicon.ico" />
       </Head>

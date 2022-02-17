@@ -5,7 +5,7 @@ export default function Notificacoes() {
   return (
     <>
       <Head>
-          <title>Notificações</title>
+          <title>Notificações - Drª Ana Katarina</title>
           <meta name="Pagina Noticações" content="Pagina para alerta para usuários" />
           <link rel="icon" href="/favicon.ico" />
       </Head>

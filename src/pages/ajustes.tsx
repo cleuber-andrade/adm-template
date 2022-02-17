@@ -5,7 +5,7 @@ export default function Ajustes() {
   return (
     <>
       <Head>
-          <title>Ajustes</title>
+          <title>Ajustes - Drª Ana Katarina</title>
           <meta name="Pagina Ajustes" content="configurações do app" />
           <link rel="icon" href="/favicon.ico" />
       </Head>

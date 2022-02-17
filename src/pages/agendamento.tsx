@@ -8,7 +8,7 @@ const Agendamento = ({}: AgendamentoProps) => {
   return(
     <div>
       <Head>
-          <title>Agendamento</title>
+          <title>Agendamento - Drª Ana Katarina</title>
           <meta name="Pagina Agendamento" content="pagina de agendamento" />
           <link rel="icon" href="/favicon.ico" />
       </Head>

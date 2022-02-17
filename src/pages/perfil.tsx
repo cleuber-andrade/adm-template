@@ -5,7 +5,7 @@ export default function Perfil() {
   return (
     <>
       <Head>
-          <title>Perfil</title>
+          <title>Perfil - Drª Ana Katarina</title>
           <meta name="Perfil" content="Informações sobre o perfil do usuário" />
           <link rel="icon" href="/favicon.ico" />
       </Head>
