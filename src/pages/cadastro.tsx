@@ -16,12 +16,12 @@ const Cadastro = ({}: CadastroProps) => {
         <div className="
           mt-20
           bg-white
-          p-5 rounded-md
+          p-6 rounded-md
           bg-opacity-20
           backdrop-filter
           backdrop-blur-lg"
         >
-
+          Cadastro Clientes
         </div>
       </Layout>
     </div>
