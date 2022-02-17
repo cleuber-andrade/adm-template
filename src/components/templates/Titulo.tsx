@@ -14,7 +14,7 @@ export default function Titulo({titulo, subtitulo}: TituloProps) {
               {titulo}
           </h1>
           <h2 className={`
-              font-light text-sm
+              font-light text-lg
               dark:text-gray-300
           `}>
               {subtitulo}
