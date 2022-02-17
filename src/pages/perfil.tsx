@@ -4,7 +4,7 @@ import Head from 'next/head'
 export default function Perfil() {
   return (
     <>
-    <Head>
+      <Head>
           <title>Perfil</title>
           <meta name="Perfil" content="Informações sobre o perfil do usuário" />
           <link rel="icon" href="/favicon.ico" />
