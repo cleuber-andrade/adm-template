@@ -10,8 +10,8 @@ export default function Logo() {
       `}>
           <Image
             src={'/images/logoKathy-removebg-preview.png'}
-            width={70}
-            height={70}
+            width={100}
+            height={100}
             alt='Logo Marca Drª Ana Katarina'
           />
       </div>
