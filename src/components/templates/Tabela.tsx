@@ -8,15 +8,16 @@ const Tabela = ({clientes}: TabelaProps) => {
   const renderizarCabecalho = () =>{
     return (
       <tr>
-        <th>Nome</th>
-        <th>Cpf</th>
-        <th>Carteira</th>
-        <th>Endereco</th>
-        <th>Nascimento</th>
-        <th>tel</th>
-        <th>plano</th>
-        <th>especialidade</th>
-        <th>doutor</th>
+        <th className="pb-5">Id</th>
+        <th className="pb-5">Nome</th>
+        <th className="pb-5">CPF</th>
+        <th className="pb-5">Carteira</th>
+        <th className="pb-5">Endereco</th>
+        <th className="pb-5">Nascimento</th>
+        <th className="pb-5">Telefone</th>
+        <th className="pb-5">Plano</th>
+        <th className="pb-5">Especialidade</th>
+        <th className="pb-5">Doutor</th>
       </tr>
     )
   }
@@ -24,25 +25,25 @@ const Tabela = ({clientes}: TabelaProps) => {
   const renderizarDados = () =>{
     return clientes?.map((cliente, i) => {
       return (
-        <tr key={cliente.id}>
-          <td>{cliente.id}</td>
-          <td>{cliente.nome}</td>
-          <td>{cliente.cpf}</td>
-          <td>{cliente.carteira}</td>
-          <td>{cliente.endereco}</td>
-          <td>{cliente.nascimento}</td>
-          <td>{cliente.tel}</td>
-          <td>{cliente.plano}</td>
-          <td>{cliente.especialidade}</td>
-          <td>{cliente.doutor}</td>
+        <tr key={cliente.id} className={` ${i % 2 === 0 ? "bg-white bg-opacity-40" : "bg-white bg-opacity-20"}`}>
+          <td className=" p-4">{cliente.id}</td>
+          <td className=" p-4">{cliente.nome}</td>
+          <td className=" p-4">{cliente.cpf}</td>
+          <td className=" p-4">{cliente.carteira}</td>
+          <td className=" p-4">{cliente.endereco}</td>
+          <td className=" p-4">{cliente.nascimento}</td>
+          <td className=" p-4">{cliente.tel}</td>
+          <td className=" p-4">{cliente.plano}</td>
+          <td className=" p-4">{cliente.especialidade}</td>
+          <td className=" p-4">{cliente.doutor}</td>
         </tr>
       )
     })
   }
 
   return(
-    <table>
-      <thead>
+    <table className="w-full">
+      <thead className="text-xl">
         {renderizarCabecalho()}
       </thead>
       <tbody>
@@ -51,4 +52,5 @@ const Tabela = ({clientes}: TabelaProps) => {
     </table>
   )
 };
+
 export default Tabela;

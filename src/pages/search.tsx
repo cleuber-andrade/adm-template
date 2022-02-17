@@ -9,7 +9,8 @@ interface  PesquisaProps  {
 const Search = ({}: PesquisaProps) => {
 
   const clientes = [
-    new Cliente("", 'Cleuber', "058.038.137-45", "15975345", "Av. Brasil, 15", 28041987, "(21)99710-9964", "Assim", "Clinico", "Ana Katarina")
+    new Cliente(1, 'Cleuber', "000.000.000-00", "15975345", "Av. Brasil, 15", 28041987, "(21)33333333", "Assim", "Clinico", "Ana Katarina"),
+    new Cliente(2, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", 123456789, "(21)99333554", "cmoam", "Clinico", "Luciana")
   ]
 
   return(
