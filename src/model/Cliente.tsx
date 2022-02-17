@@ -10,7 +10,8 @@ export default class Cliente {
   #especialidade: string
   #doutor: string
 
-  constructor(nome: string, cpf: number, carteira: string, endereco: string, nascimento: number, tel: string,  plano: string, especialidade: string, doutor: string, id: string = null){
+  constructor(id: string = null ,nome: string, cpf: number , carteira: string, endereco: string, nascimento: number, tel: string,  plano: string, especialidade: string, doutor: string ){
+    this.#id = id
     this.#nome = nome
     this.#cpf = cpf
     this.#carteira = carteira
@@ -20,12 +21,50 @@ export default class Cliente {
     this.#plano = plano
     this.#especialidade = especialidade
     this.#doutor = doutor
-    this.#id = id
+  }
+
+  static vazio(){
+    return new Cliente("", "", 0, "", "", 0, "", "", "","")
+  }
+
+  get nome(){
+    return this.#nome
+  }
+
+  get cpf(){
+    return this.#cpf
+  }
+
+  get carteira(){
+    return this.#carteira
+  }
+
+  get endereco(){
+    return this.#endereco
+  }
+
+  get nascimento(){
+    return this.#nascimento
+  }
+
+  get tel() {
+    return this.#tel
+  }
+
+  get plano(){
+    return this.#plano
+  }
+
+  get especialidade(){
+    return this.#especialidade
+  }
+
+  get doutor(){
+    return this.#doutor
   }
 
   get id(){
-    return this.#id
+    return this.id
   }
 
-  
 }
