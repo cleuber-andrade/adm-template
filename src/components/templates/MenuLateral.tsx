@@ -1,6 +1,6 @@
 //2º
 import useAuth from "../../contextApi/hook/useAuth"
-import { IconeAjustes, IconeCasa, IconeLogout, IconeNotificacoes } from "../icons"
+import { IconeAgenda, IconeAjustes, IconeCadastro, IconeCasa, IconeLogout, IconeNotificacoes } from "../icons"
 import Logo from "./Logo"
 import MenuItem from "./MenuItem"
 
@@ -23,6 +23,8 @@ export default function MenuLateral() {
             </div>
             <ul className="flex-grow ">
                 <MenuItem url="/" texto="Início" icone={IconeCasa} />
+                <MenuItem url="/cadastro" texto="Cadastro" icone={IconeCadastro} />
+                <MenuItem url="/agendamento" texto="Agendamento" icone={IconeAgenda} />
                 <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes} />
                 <MenuItem url="/notificacoes" texto="Notificações" icone={IconeNotificacoes}  />
             </ul>
