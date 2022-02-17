@@ -13,7 +13,7 @@ const Cadastro = ({}: CadastroProps) => {
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout titulo="Cadastro" subtitulo="Aqui é o cadastramento">
-        <h2>Cadastro</h2>
+        
       </Layout>
     </div>
   )
