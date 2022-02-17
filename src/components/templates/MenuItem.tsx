@@ -10,6 +10,7 @@ interface MenuItemProps {
 }
 
 export default function MenuItem({texto, icone, url, className, onClick}: MenuItemProps) {
+
     function renderizarLink() {
         return (
             <a className={`
@@ -25,10 +26,13 @@ export default function MenuItem({texto, icone, url, className, onClick}: MenuIt
             </a>
         )
     }
+
     return (
         <li onClick={onClick} className={`
-            hover:bg-gray-100 dark:hover:bg-gray-800
+            transition duration-500 ease-in-out
+            hover:bg-gray-300 dark:hover:bg-gray-600
             cursor-pointer
+
         `}>
             {url ? (
                 <Link href={url}>

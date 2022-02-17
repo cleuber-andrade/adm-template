@@ -21,16 +21,17 @@ export default function MenuLateral() {
             `}>
                 <Logo />
             </div>
-            <ul className="flex-grow">
+            <ul className="flex-grow ">
                 <MenuItem url="/" texto="Início" icone={IconeCasa} />
                 <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes} />
-                <MenuItem url="/notificacoes" texto="Notificações" icone={IconeNotificacoes} />
+                <MenuItem url="/notificacoes" texto="Notificações" icone={IconeNotificacoes}  />
             </ul>
             <ul>
                 <MenuItem
-                    texto="Sair" icone={IconeLogout} 
+                    texto="Sair" icone={IconeLogout}
                     onClick={logout}
                     className={`
+                        transition duration-500 ease-in-out
                         text-red-600 dark:text-red-400
                         hover:bg-red-400 hover:text-white
                         dark:hover:text-white

@@ -20,7 +20,7 @@ export default function Layout({ titulo ,subtitulo ,children  }: LayoutProps) {
                 <div className={`
                 flex flex-col w-full p-7
                 bg-gray-300 dark:bg-gray-800
-            `}>
+                `}>
                     <Cabecalho titulo={titulo} subtitulo={subtitulo} />
                     <Conteudo>
                         {children}
