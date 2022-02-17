@@ -29,7 +29,6 @@ export default function MenuItem({texto, icone, url, className, onClick}: MenuIt
 
     return (
         <li onClick={onClick} className={`
-            rounded-r-lg
             transition duration-500 ease-in-out
             hover:bg-gray-300 dark:hover:bg-gray-800
             cursor-pointer
