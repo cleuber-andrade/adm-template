@@ -11,16 +11,15 @@ const Search = ({}: PesquisaProps) => {
   const clientes = [
     new Cliente(1, 'Cleuber', "000.000.000-00", "15975345", "Av. Brasil, 15", "15/17/1999", "(21)33333333", "Assim", "Clinico", "Ana Katarina", "cleuber_test@test.com"),
     new Cliente(2, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
-    new Cliente(3, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
-    new Cliente(4, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
-    new Cliente(5, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
-    new Cliente(6, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
-    new Cliente(7, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
-    new Cliente(8, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
-    new Cliente(9, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
-    new Cliente(10, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
-    new Cliente(10, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
   ]
+
+  const clienteSelecionado = (cliente: Cliente) => {
+    console.log(cliente.nome)
+  }
+
+  const clienteExcluido = (cliente: Cliente) => {
+    console.log(`${cliente.nome} foi excluido`)
+  }
 
   return(
     <>
@@ -39,7 +38,10 @@ const Search = ({}: PesquisaProps) => {
           dark:backdrop-blur-sm
           overflow-auto"
         >
-          <Tabela clientes={clientes}/>
+          <Tabela clientes={clientes}
+            clienteSelecionado={clienteSelecionado}
+            clienteExcluidos={clienteExcluido}
+          />
         </div>
       </Layout>
 

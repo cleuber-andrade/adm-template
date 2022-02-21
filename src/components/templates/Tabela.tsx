@@ -1,9 +1,14 @@
 import Cliente from "../../model/Cliente";
+import { IconeEditar, IconeExcluir } from "../icons";
 
 interface  TabelaProps  {
   clientes: Cliente[]
+  clienteSelecionado?: (cliente: Cliente) => void
+  clienteExcluidos?: (cliente: Cliente) => void
 }
-const Tabela = ({clientes}: TabelaProps) => {
+const Tabela = ({clientes, clienteSelecionado, clienteExcluidos}: TabelaProps) => {
+
+  const exibirAcoes = clienteExcluidos || clienteSelecionado
 
   const renderizarCabecalho = () =>{
     return (
@@ -14,6 +19,7 @@ const Tabela = ({clientes}: TabelaProps) => {
         <th className="text-left p-2">Email</th>
         <th className="text-left p-2">Nascimento</th>
         <th className="text-left p-2">Telefone</th>
+        {exibirAcoes ? <th className="p-2">Ações</th> : false}
       </tr>
     )
   }
@@ -28,9 +34,44 @@ const Tabela = ({clientes}: TabelaProps) => {
           <td className="text-left p-3">{cliente.email}</td>
           <td className="text-left p-3">{cliente.nascimento}</td>
           <td className="text-left p-3">{cliente.tel}</td>
+          {exibirAcoes ? renderizarAcoes(cliente) : false}
         </tr>
       )
     })
+  }
+
+  const renderizarAcoes = (cliente: Cliente) => {
+    return(
+      <td className="flex justify-center">
+        {clienteSelecionado ? (
+          <button onClick={() => clienteSelecionado?.(cliente)} className={`
+            flex
+            justify-center items-start
+            text-green-600 rounded-full
+            p-2 m-1
+            hover:bg-gray-600
+            hover:bg-opacity-25
+            `}>
+              {IconeEditar}
+              Editar
+          </button>
+        ): false}
+        {clienteExcluidos? (
+          <button onClick={() => clienteExcluidos?.(cliente)} className={`
+            flex
+            justify-center items-center
+            text-
+            text-red-500 rounded-full
+            p-2 m-1
+            hover:bg-gray-600
+            hover:bg-opacity-25
+          `}>
+            {IconeExcluir}
+            Excluir
+        </button>
+        ): false}
+      </td>
+    )
   }
 
   return(
