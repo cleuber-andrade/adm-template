@@ -15,7 +15,7 @@ export default function Layout({ titulo ,subtitulo ,children  }: LayoutProps) {
     const { tema } = useAppData()
     return (
         <ForcarAutenticacao>
-            <div className={`${tema} flex h-screen w-screen overflow-auto`}>
+            <div className={`${tema} flex h-screen w-screen `}>
                 <MenuLateral />
                 <div className={`
                 flex flex-col w-full p-7

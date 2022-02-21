@@ -19,6 +19,7 @@ const Search = ({}: PesquisaProps) => {
     new Cliente(8, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
     new Cliente(9, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
     new Cliente(10, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
+    new Cliente(10, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com"),
   ]
 
   return(
@@ -31,14 +32,11 @@ const Search = ({}: PesquisaProps) => {
         </Head>
         <div className="
           relative
-          mt-20
-          md:h-full
-          bg-white
+          dark:bg-white
           p-6 rounded-md
           dark:bg-opacity-20
           dark:backdrop-filter
           dark:backdrop-blur-sm
-          md:overflow-hidden
           overflow-auto"
         >
           <Tabela clientes={clientes}/>
