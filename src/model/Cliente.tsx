@@ -4,13 +4,14 @@ export default class Cliente {
   #cpf: string
   #carteira: string
   #endereco: string
-  #nascimento: number
+  #nascimento: string
   #tel: string
   #plano: string
   #especialidade: string
   #doutor: string
+  #email: string
 
-  constructor(id: number = null,nome: string, cpf: string , carteira: string, endereco: string, nascimento: number, tel: string,  plano: string, especialidade: string, doutor: string ){
+  constructor(id: number = null,nome: string, cpf: string , carteira: string, endereco: string, nascimento: string, tel: string,  plano: string, especialidade: string, doutor: string, email: string ){
     this.#id = id
     this.#nome = nome
     this.#cpf = cpf
@@ -21,10 +22,11 @@ export default class Cliente {
     this.#plano = plano
     this.#especialidade = especialidade
     this.#doutor = doutor
+    this.#email = email
   }
 
   static vazio(){
-    return new Cliente(0, "", "", "", "", 0, "", "", "","")
+    return new Cliente(0, "", "", "", "", "", "", "", "","", "")
   }
 
   get nome(){
@@ -65,6 +67,10 @@ export default class Cliente {
 
   get id(){
     return this.#id
+  }
+
+  get email(){
+    return this.#email
   }
 
 }

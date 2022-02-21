@@ -9,8 +9,8 @@ interface  PesquisaProps  {
 const Search = ({}: PesquisaProps) => {
 
   const clientes = [
-    new Cliente(1, 'Cleuber', "000.000.000-00", "15975345", "Av. Brasil, 15", 28041987, "(21)33333333", "Assim", "Clinico", "Ana Katarina"),
-    new Cliente(2, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", 123456789, "(21)99333554", "cmoam", "Clinico", "Luciana")
+    new Cliente(1, 'Cleuber', "000.000.000-00", "15975345", "Av. Brasil, 15", "15/17/1999", "(21)33333333", "Assim", "Clinico", "Ana Katarina", "cleuber_test@test.com"),
+    new Cliente(2, 'Nathy', "2121212", "15975345", "Av. Brasil, 17", "30/02/1937", "(21)99333554", "cmoam", "Clinico", "Luciana", "nathy.test@test.com")
   ]
 
   return(
@@ -27,7 +27,8 @@ const Search = ({}: PesquisaProps) => {
           p-6 rounded-md
           dark:bg-opacity-20
           dark:backdrop-filter
-          dark:backdrop-blur-lg"
+          dark:backdrop-blur-sm
+          overflow-auto"
         >
           <Tabela clientes={clientes}/>
         </div>
