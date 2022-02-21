@@ -35,10 +35,10 @@ const Cadastramento = ({cliente}: CadastramentoProps) => {
         valorMudou={setCpf}
       />
       <div className="flex justify-end mt-7">
-        <Botao className={"mr-2"}>
+        <Botao color="gray" className={"mr-2"}>
           {id ? "Alterar" : "Salvar"}
         </Botao>
-        <Botao>
+        <Botao color="red">
           Cancelar
         </Botao>
       </div>
