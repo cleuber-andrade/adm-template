@@ -22,12 +22,50 @@ export default function MenuLateral() {
                 <Logo />
             </div>
             <ul className="flex-grow ">
-                <MenuItem url="/" texto="Home" icone={IconeCasa} />
-                <MenuItem url="/cadastro" texto="Cadastro" icone={IconeCadastro} />
-                <MenuItem url="/agendamento" texto="Agendamento" icone={IconeAgenda} />
-                <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes} />
-                <MenuItem url="/search" texto="Pesquisa" icone={IconeSource} />
-                <MenuItem url="/notificacoes" texto="Notificações" icone={IconeNotificacoes}  />
+                <MenuItem url="/" texto="Home" icone={IconeCasa} className="
+                  hover:border-x-2
+                  border-lime-400
+                  hover:transition-transform
+                  hover:duration-700
+                  hover:ease-in-out"
+                />
+                <MenuItem url="/cadastro" texto="Cadastro" icone={IconeCadastro} className="
+                  hover:border-x-2
+                  border-yellow-400
+                  hover:transition-transform
+                  hover:duration-700
+                  hover:ease-in-out"
+                />
+                <MenuItem url="/agendamento" texto="Agendamento" icone={IconeAgenda} className="
+                  hover:border-x-2
+                  border-pink-500
+                  hover:transition-transform
+                  hover:duration-700
+                  hover:ease-in-out"
+                />
+                <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes}       className="
+                  hover:border-x-2
+                  border-purple-600
+                  hover:transition-transform
+                  hover:duration-700
+                  hover:ease-in-out"
+                />
+                <MenuItem url="/search" texto="Pesquisa" icone={IconeSource}
+                  className="
+                    hover:border-x-2
+                    border-blue-600
+                    hover:transition-transform
+                    hover:duration-700
+                    hover:ease-in-out"
+                />
+                <MenuItem url="/notificacoes" texto="Notificações" icone={IconeNotificacoes}
+                  className="
+                    hover:border-x-2
+                    border-emerald-400
+                    hover:transition-transform
+                    hover:duration-700
+                    hover:ease-in-out"
+                />
             </ul>
             <ul>
                 <MenuItem
