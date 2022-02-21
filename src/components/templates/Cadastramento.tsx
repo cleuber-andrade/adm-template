@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Cliente from "../../model/Cliente";
 import CadastroEntrada from "../templates/CadastroEntrada"
+import Botao from "../templates/Botao";
 
 interface  CadastramentoProps  {
   cliente: Cliente
@@ -33,8 +34,13 @@ const Cadastramento = ({cliente}: CadastramentoProps) => {
         valor={cpf}
         valorMudou={setCpf}
       />
-      <div>
-        bottao
+      <div className="flex justify-end mt-3">
+        <Botao className={"mr-2"}>
+          {id ? "Alterar" : "Salvar"}
+        </Botao>
+        <Botao>
+          Cancelar
+        </Botao>
       </div>
     </div>
   )
