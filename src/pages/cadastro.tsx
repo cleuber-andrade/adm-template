@@ -1,6 +1,6 @@
 import Layout from "../components/templates/Layout";
 import Head from 'next/head';
-import Cadastramento from "../components/templates/Cadastramento";
+import Cadastramento from "../components/templates/Cadastramento"
 
 
 interface  CadastroProps  {
@@ -16,15 +16,14 @@ const Cadastro = ({}: CadastroProps) => {
       </Head>
       <Layout titulo="Cadastro" subtitulo="Cadastramento de Clientes"
       >
-        <Cadastramento className="dark:bg-white
+      <div className="dark:bg-white
           p-6 rounded-md
           dark:bg-opacity-20
           dark:backdrop-filter
           dark:backdrop-blur-sm>
-          Cadastro Cliente"
-        >
-          Cadastramento de Clientes
-        </Cadastramento>
+          Cadastro Cliente">
+          <Cadastramento />
+      </div>
       </Layout>
     </div>
   )
