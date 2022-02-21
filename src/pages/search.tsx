@@ -22,12 +22,15 @@ const Search = ({}: PesquisaProps) => {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className="
+          relative
           mt-20
+          h-52
           bg-white
           p-6 rounded-md
           dark:bg-opacity-20
           dark:backdrop-filter
           dark:backdrop-blur-sm
+          md:overflow-hidden
           overflow-auto"
         >
           <Tabela clientes={clientes}/>
