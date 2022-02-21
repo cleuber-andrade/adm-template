@@ -5,6 +5,7 @@ import CadastroEntrada from "../templates/CadastroEntrada"
 interface  CadastramentoProps  {
   cliente: Cliente
 }
+
 const Cadastramento = ({cliente}: CadastramentoProps) => {
   const id = cliente?.id
   const [nome, setNome] = useState(cliente?.nome?? "")
@@ -17,17 +18,24 @@ const Cadastramento = ({cliente}: CadastramentoProps) => {
           somenteLeitura
           texto="Id"
           valor={id}
+          className="mb-4"
         />
       ) : false}
       <CadastroEntrada
         texto="Nome"
         valor={nome}
+        valorMudou={setNome}
+        className="mb-4"
       />
       <CadastroEntrada
         texto="CPF"
         tipo="number"
         valor={cpf}
+        valorMudou={setCpf}
       />
+      <div>
+        bottao
+      </div>
     </div>
   )
 };
