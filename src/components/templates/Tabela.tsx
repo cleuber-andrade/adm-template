@@ -34,7 +34,7 @@ const Tabela = ({clientes}: TabelaProps) => {
   }
 
   return(
-    <table className="w-full rounded-md absolute">
+    <table className="w-full rounded-md absolute md:static overflow-hidden">
       <thead className="text-sm">
         {renderizarCabecalho()}
       </thead>
