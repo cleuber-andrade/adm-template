@@ -1,4 +1,5 @@
 interface  EntradaSelectProps  {
+  plano?: "Assim" | "Amil" | "Unimed"
   valor: any
   texto: string
   className?: string
@@ -6,11 +7,13 @@ interface  EntradaSelectProps  {
   somenteLeitura?: boolean
   onChange?: (valor: any) => void
 }
-const EntradaSelect = ({valor, texto, onChange, className, corInput, somenteLeitura}: EntradaSelectProps) => {
+const EntradaSelect = ({valor, texto, onChange, className, corInput, somenteLeitura, plano}: EntradaSelectProps) => {
+
+
 
   return(
     <div className= {`flex flex-col ${className}`}>
-      <label className={`mb-2`}>
+      <label className={`mb-2 text-xl font-bold`}>
         {texto}
       </label>
       <select
@@ -24,10 +27,10 @@ const EntradaSelect = ({valor, texto, onChange, className, corInput, somenteLeit
         ${corInput ? "text-slate-800" : false}
       `}
       >
-        <option value={valor}>Selecione o Plano</option>
-        <option value={valor}>Assim</option>
-        <option value={valor}>Amil</option>
-        <option value={valor}>Unimed</option>
+        <option value={valor}>Selecione o plano</option>
+        <option value={valor}>{plano}</option>
+        <option value={valor}>{plano}</option>
+        <option value={valor}>{plano}</option>
       </select>
     </div>
   )

@@ -12,7 +12,7 @@ const CadastroEntrada = ({texto, tipo, valor, somenteLeitura, valorMudou, classN
 
   return(
     <div className={`flex flex-col ${className} `}>
-      <label className="mb-2">
+      <label className="mb-2 text-xl font-bold">
         {texto}
       </label>
       <input

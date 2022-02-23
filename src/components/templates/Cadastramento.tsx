@@ -17,6 +17,9 @@ const Cadastramento = ({cliente}: CadastramentoProps) => {
   const [carteirinha, setCarteirinha] = useState(cliente?.carteira?? "")
   const [telefone, setTelefone] = useState(cliente?.tel?? "")
   const [plano, setPlano] = useState(cliente?.plano?? "")
+  const [especialidade, setEspecialidade] = useState(cliente?.especialidade?? "")
+  const [doutor, setDoutor] = useState(cliente?.doutor?? "")
+  const [email, setEmail] = useState(cliente?.email?? "")
 
   return(
     <>
@@ -58,7 +61,7 @@ const Cadastramento = ({cliente}: CadastramentoProps) => {
           colorInput
           valor={endereco}
           valorMudou={setEndereco}
-          className="mb-4 w-1/3"
+          className="mb-4"
         />
         <CadastroEntrada
           texto="Nº Carteirinha"
@@ -75,13 +78,33 @@ const Cadastramento = ({cliente}: CadastramentoProps) => {
           valorMudou={setTelefone}
         />
 
+        <CadastroEntrada
+          texto="Email"
+          colorInput
+          tipo="text"
+          valor={email}
+          valorMudou={setEmail}
+        />
+
         <EntradaSelect
           texto="Plano"
           valor={plano}
           onChange={setPlano}
           corInput
         />
-        
+
+        <EntradaSelect
+          texto="Especialidade"
+          valor={especialidade}
+          onChange={setEspecialidade}
+          corInput
+        />
+        <EntradaSelect
+          texto="Doutor"
+          valor={doutor}
+          onChange={setDoutor}
+          corInput
+        />
       </div>
       <div className="flex flex-row justify-end mt-7 rounded-md">
         <Botao className={"mr-2"}>
