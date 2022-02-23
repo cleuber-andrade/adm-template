@@ -11,38 +11,48 @@ const Cadastramento = ({cliente}: CadastramentoProps) => {
   const id = cliente?.id
   const [nome, setNome] = useState(cliente?.nome?? "")
   const [cpf, setCpf] = useState(cliente?.cpf?? 0)
+  const [nascimento, setNascimento] = useState(cliente?.nascimento?? "")
 
   return(
-    <div className="flex flex-col md:flex-row">
-      {id ? (
+    <>
+      <div className="flex flex-wrap space-x-4">
+        {id ? (
+          <CadastroEntrada
+            somenteLeitura
+            texto="Id"
+            valor={id}
+            className="mb-4 w-24"
+          />
+        ) : false}
         <CadastroEntrada
-          somenteLeitura
-          texto="Id"
-          valor={id}
-          className="mb-4"
+          texto="Nome"
+          valor={nome}
+          valorMudou={setNome}
+          className="mb-4 w-1/3"
         />
-      ) : false}
-      <CadastroEntrada
-        texto="Nome"
-        valor={nome}
-        valorMudou={setNome}
-        className="mb-4"
-      />
-      <CadastroEntrada
-        texto="CPF"
-        tipo="number"
-        valor={cpf}
-        valorMudou={setCpf}
-      />
-      <div className="flex justify-end mt-7">
-        <Botao color="gray" className={"mr-2"}>
-          {id ? "Alterar" : "Salvar"}
+        <CadastroEntrada
+          texto="CPF"
+          tipo="number"
+          valor={cpf}
+          valorMudou={setCpf}
+        />
+        <CadastroEntrada
+          texto="Nascimento"
+          tipo="date"
+          valor={nascimento}
+          valorMudou={setNascimento}
+        />
+      </div>
+      <div className="flex flex-row justify-end mt-7 rounded-md">
+        <Botao className={"mr-2"}>
+          Salvar
         </Botao>
-        <Botao color="red">
+        <Botao >
           Cancelar
         </Botao>
       </div>
-    </div>
+    </>
+
   )
 };
 export default Cadastramento;

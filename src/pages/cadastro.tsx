@@ -6,7 +6,7 @@ import Cliente from "../model/Cliente"
 
 
 interface  CadastroProps  {
-  
+
 }
 const Cadastro = ({}: CadastroProps) => {
 
@@ -24,14 +24,14 @@ const Cadastro = ({}: CadastroProps) => {
       </Head>
       <Layout titulo="Cadastro" subtitulo="Cadastramento de Clientes"
       >
-      <div className="dark:bg-white
-          p-6 rounded-md
-          dark:bg-opacity-20
-          dark:backdrop-filter
-          dark:backdrop-blur-sm>
-          Cadastro Cliente">
+        <div className="dark:bg-white
+            p-6 rounded-md
+            dark:bg-opacity-20
+            dark:backdrop-filter
+            dark:backdrop-blur-sm>
+        ">
           <Cadastramento cliente={clientes[0]}/>
-      </div>
+        </div>
       </Layout>
     </div>
   )

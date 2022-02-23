@@ -47,11 +47,11 @@ const Tabela = ({clientes, clienteSelecionado, clienteExcluidos}: TabelaProps) =
           <button onClick={() => clienteSelecionado?.(cliente)} className={`
             flex
             justify-center items-start
-            text-green-600 rounded-full
+            text-green-600 rounded-md
             p-2 m-1
-            nm-flat-gray-50-sm
+            nm-concave-gray-50-sm
             active:nm-inset-gray-50-sm
-            dark:nm-flat-gray-100-sm
+            dark:nm-concave-gray-100-sm
             dark:active:nm-inset-gray-100-sm
             `}>
               {IconeEditar}
@@ -63,11 +63,11 @@ const Tabela = ({clientes, clienteSelecionado, clienteExcluidos}: TabelaProps) =
             flex
             justify-center items-center
             text-
-            text-red-500 rounded-full
+            text-red-500 rounded-md
             p-2 m-1
-            nm-flat-gray-50-sm
+            nm-concave-gray-50-sm
             active:nm-inset-gray-50-sm
-            dark:nm-flat-gray-100-sm
+            dark:nm-concave-gray-100-sm
             dark:active:nm-inset-gray-100-sm
           `}>
             {IconeExcluir}

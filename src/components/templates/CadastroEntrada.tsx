@@ -1,5 +1,5 @@
 interface  CadastroEntradaProps  {
-  tipo?: "text" | "number"
+  tipo?: "text" | "number" | "date"
   texto: string
   valor: any
   somenteLeitura?: boolean
