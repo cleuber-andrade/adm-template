@@ -75,7 +75,7 @@ const Tabela = ({clientes, clienteSelecionado, clienteExcluidos}: TabelaProps) =
   }
 
   return(
-    <table className="w-full rounded-md absolute md:static overflow-hidden">
+    <table className="w-full rounded-md">
       <thead className="text-sm">
         {renderizarCabecalho()}
       </thead>

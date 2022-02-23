@@ -29,15 +29,7 @@ const Search = ({}: PesquisaProps) => {
             <meta name="Pagina pesquisar clientes" content="Realizar Pesquisa de clientes" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="
-          relative
-          dark:bg-white
-          p-6 rounded-md
-          dark:bg-opacity-20
-          dark:backdrop-filter
-          dark:backdrop-blur-sm
-          overflow-auto"
-        >
+        <div className="overflow-auto rounded-lg">
           <Tabela clientes={clientes}
             clienteSelecionado={clienteSelecionado}
             clienteExcluidos={clienteExcluido}
