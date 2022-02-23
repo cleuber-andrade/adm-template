@@ -3,10 +3,13 @@ interface  CadastroEntradaProps  {
   texto: string
   valor: any
   somenteLeitura?: boolean
+  colorInput?: boolean
   className?: string
   valorMudou?: (valor: any) => void
 }
-const CadastroEntrada = ({texto, tipo, valor, somenteLeitura, valorMudou, className }: CadastroEntradaProps) => {
+const CadastroEntrada = ({texto, tipo, valor, somenteLeitura, valorMudou, className, colorInput}: CadastroEntradaProps) => {
+
+
   return(
     <div className={`flex flex-col ${className}`}>
       <label className="mb-2">
@@ -23,6 +26,7 @@ const CadastroEntrada = ({texto, tipo, valor, somenteLeitura, valorMudou, classN
           bg-gray-100
           px-4 py-2
           ${somenteLeitura ? "" : "focus:bg-white"}
+          ${colorInput ? "text-slate-800" : false}
         `}
       />
     </div>

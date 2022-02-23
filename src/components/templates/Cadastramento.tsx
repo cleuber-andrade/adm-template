@@ -15,10 +15,11 @@ const Cadastramento = ({cliente}: CadastramentoProps) => {
 
   return(
     <>
-      <div className="flex flex-wrap space-x-4">
+      <div className="flex flex-wrap justify-center space-x-8">
         {id ? (
           <CadastroEntrada
             somenteLeitura
+            colorInput
             texto="Id"
             valor={id}
             className="mb-4 w-24"
@@ -26,18 +27,21 @@ const Cadastramento = ({cliente}: CadastramentoProps) => {
         ) : false}
         <CadastroEntrada
           texto="Nome"
+          colorInput
           valor={nome}
           valorMudou={setNome}
-          className="mb-4 w-1/3"
+          className="mb-4 w-1/3 colorInput"
         />
         <CadastroEntrada
           texto="CPF"
+          colorInput
           tipo="number"
           valor={cpf}
           valorMudou={setCpf}
         />
         <CadastroEntrada
           texto="Nascimento"
+          colorInput
           tipo="date"
           valor={nascimento}
           valorMudou={setNascimento}
