@@ -49,8 +49,10 @@ const Tabela = ({clientes, clienteSelecionado, clienteExcluidos}: TabelaProps) =
             justify-center items-start
             text-green-600 rounded-full
             p-2 m-1
-            hover:bg-gray-600
-            hover:bg-opacity-25
+            nm-flat-gray-50-sm
+            active:nm-inset-gray-50-sm
+            dark:nm-flat-gray-100-sm
+            dark:active:nm-inset-gray-100-sm
             `}>
               {IconeEditar}
               Editar
@@ -63,8 +65,10 @@ const Tabela = ({clientes, clienteSelecionado, clienteExcluidos}: TabelaProps) =
             text-
             text-red-500 rounded-full
             p-2 m-1
-            hover:bg-gray-600
-            hover:bg-opacity-25
+            nm-flat-gray-50-sm
+            active:nm-inset-gray-50-sm
+            dark:nm-flat-gray-100-sm
+            dark:active:nm-inset-gray-100-sm
           `}>
             {IconeExcluir}
             Excluir

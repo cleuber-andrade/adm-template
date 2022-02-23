@@ -1,17 +1,14 @@
 interface  BotaoProps  {
-  color?: "green" | "red" | "gray"
   className?: string
   children: any
 }
-const Botao = ({color ,className, children}: BotaoProps) => {
-  const cor = color ?? "gray"
+const Botao = ({className, children}: BotaoProps) => {
 
   return(
     <button
       className={`
-      bg-gradient-to-r from-${cor}-400 to-${cor}-700
+      nm-flat-gray-100-sm active:nm-inset-gray-100-sm
       text-white rounded-md
-      px-4 py-2
       ${className}
       `}
     >
