@@ -1,5 +1,5 @@
 interface  CadastroEntradaProps  {
-  tipo?: "text" | "number" | "date"
+  tipo?: "text" | "number" | "date" | "email"
   texto: string
   valor: any
   somenteLeitura?: boolean
@@ -11,7 +11,7 @@ const CadastroEntrada = ({texto, tipo, valor, somenteLeitura, valorMudou, classN
 
 
   return(
-    <div className={`flex flex-col ${className}`}>
+    <div className={`flex flex-col ${className} `}>
       <label className="mb-2">
         {texto}
       </label>
